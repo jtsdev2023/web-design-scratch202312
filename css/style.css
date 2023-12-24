@@ -1,0 +1,79 @@
+/*
+
+according to youtube channel "frontend fyi", default font size is 16px.
+setting value to 62.5% is equal to setting the font size to 10px.
+using 10px makes the math easier when using "rem", which is the suggested method.
+
+i tested this by setting the default font size in css to 62.5%, using monospace font
+family, and then the chromium developer tools to inspect the format.
+
+this showed that 8rem equals font size of 80px, which is the intended outcome; thus,
+this the 62.5% font size method was shown to work as expected.
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+
+header {
+    background-color: gray;
+    padding: 3rem; /* 1rem = 10px 3rem = 30 px */
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    /* border-radius: .5rem; */
+}
+
+/* create 2 columns/boxes that float next to each other */
+nav {
+    float:left;
+    width: 30%;
+    height: 30rem;
+    background: #ccc;
+    padding: 2rem;
+}
+
+/* style menu list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li > a {
+    text-decoration: none;
+}
+
+article {
+    float: left;
+    padding: 2rem;
+    width: 70%;
+    height: 30rem;
+    background-color: #f1f1f1;
+}
+
+/* clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color: #777;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 60rem) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
