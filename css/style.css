@@ -13,67 +13,77 @@ this the 62.5% font size method was shown to work as expected.
 */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%; /* 62.5% of 16px = 10px */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
 }
 
 header {
-    background-color: gray;
-    padding: 3rem; /* 1rem = 10px 3rem = 30 px */
-    text-align: center;
-    font-size: 3.5rem;
-    color: white;
-    /* border-radius: .5rem; */
+  background-color: gray;
+  padding: 3rem; /* 1rem = 10px 3rem = 30 px */
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  /* border-radius: .5rem; */
 }
 
 /* create 2 columns/boxes that float next to each other */
 nav {
-    float:left;
-    width: 30%;
-    height: 30rem;
-    background: #ccc;
-    padding: 2rem;
+  width: auto;
+  background: #ccc;
+  padding: 2rem;
 }
 
 /* style menu list */
+/*
+"display: flex" and "justif-content: space-between" combine
+to make horizontal menu/navbar equally spaced.
+use "padding: 0 20rem;" to bring menu items in from the
+left/right edges i.e. -->  <--.
+*/
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rem;
 }
 
 nav ul li > a {
-    text-decoration: none;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
 }
 
 article {
-    float: left;
-    padding: 2rem;
-    width: 70%;
-    height: 30rem;
-    background-color: #f1f1f1;
+  float: left;
+  padding: 2rem;
+  width: 70%;
+  height: 30rem;
+  background-color: #f1f1f1;
 }
 
 /* clear floats after the columns */
 section::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 footer {
-    background-color: #777;
-    padding: 1rem;
-    text-align: center;
-    color: white;
+  background-color: #777;
+  padding: 1rem;
+  text-align: center;
+  color: white;
 }
 
 @media (max-width: 60rem) {
-    nav, article {
-        width: 100%;
-        height: auto;
-    }
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
 }
