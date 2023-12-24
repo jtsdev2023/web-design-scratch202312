@@ -23,18 +23,23 @@ html {
 
 header {
   background-color: gray;
-  padding: 3rem; /* 1rem = 10px 3rem = 30 px */
+  padding: 1rem 0; /* 1rem = 10px 3rem = 30 px */
   text-align: center;
   font-size: 5rem;
   color: white;
-  /* border-radius: .5rem; */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-/* create 2 columns/boxes that float next to each other */
 nav.horizontal-navbar {
-  width: auto;
+  width: 100%;
   background: #ccc;
-  padding: 1rem;
+  padding: 1rem 0;
+  position: fixed;
+  top: 7.75rem;
+  left: 0;
 }
 
 /* style menu list */
@@ -46,10 +51,9 @@ left/right edges i.e. -->  <--.
 */
 nav.horizontal-navbar ul {
   list-style-type: none;
-  padding: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 20rem;
+  padding: 0 10rem;
 }
 
 nav.horizontal-navbar ul li > a {
@@ -60,18 +64,19 @@ nav.horizontal-navbar ul li > a {
 
 article {
   float: left;
-  padding: 2rem;
-  width: 90%;
-  height: auto;
+  padding: 15rem 1rem;
+  width: 83%;
+  height: 30rem;
   font-size: 1.25rem;
 }
 
 aside {
   float: left;
-  padding: 0 1%;
-  width: 10%;
-  height: auto;
+  width: 15%;
   background-color: #f1f1f1;
+  position: fixed;
+  right: 1rem;
+  top: 28rem;
 }
 
 nav.aside-navbar ul {
@@ -97,9 +102,12 @@ section::after {
 
 footer {
   background-color: #777;
-  padding: 1rem;
   text-align: center;
   color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media (max-width: 60rem) {
