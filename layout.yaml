@@ -1,0 +1,40 @@
+- title: Title1
+  images:
+    - 1.png
+    - 2.png
+  notes:
+    - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, placeat.
+    - |
+      Minus impedit, est voluptatum mollitia recusandae sapiente obcaecati dolor 
+      unde molestiae aliquam voluptatibus libero accusantium assumenda praesentium 
+      asperiores harum magni.
+    - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  code:
+    - |
+      import time
+
+      def f(input):
+          print(input)
+      
+      print("end")
+- title: Title2
+  images:
+    - 1.png
+    - 2.png
+    - 3.png
+  notes:
+    - |
+      Eligendi, minus obcaecati deleniti pariatur cum minima, accusamus, enim modi 
+      quae maxime aspernatur accusantium.
+  code:
+    - |
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <link rel="stylesheet" href="../css/style.css" />
+        </head>
+        <body></body>
+      </html>
